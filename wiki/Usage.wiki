@@ -2,12 +2,12 @@
 #labels Phase-Support
 
 =Introduction=
-This page explain the sample usage of the tool.
+This page explains the sample usage of the tool.
 
 
-The tool is built using jackrabbit-standalone 2.2.7.  The code makes use of the TransientRepository for verifying the cnd file.  Please install [http://jackrabbit.apache.org/downloads.html Jackrabbit] 2.2.7 to your local or remote maven repository.
+The tool is developed using jackrabbit standalone 2.2.7 as dependency.  The code makes use of the TransientRepository for verifying the cnd file.  Please deploy [http://jackrabbit.apache.org/downloads.html Jackrabbit] 2.2.7 to your local or remote maven repository  before building the codebase.
 
-The executable is built using [http://felix.apache.org/site/apache-felix-maven-bundle-plugin-bnd.html maven-bundle-plugin]. Please look at the pom file for details.
+The executable is a bundle packaged using [http://felix.apache.org/site/apache-felix-maven-bundle-plugin-bnd.html maven-bundle-plugin]. Please look at the pom file for more details.
 
 =Using as standalone=
 
