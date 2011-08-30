@@ -1,7 +1,33 @@
 #summary Sample usage of the tool
 #labels Phase-Support
 
-= Example 1 =
+=Introduction=
+This page explain the sample usage of the tool.
+
+
+The tool is built using jackrabbit-standalone 2.2.7.  The code makes use of the TransientRepository for verifying the cnd file.  Please install [http://jackrabbit.apache.org/downloads.html Jackrabbit] 2.2.7 to your local or remote maven repository.
+
+The executable is built using [http://felix.apache.org/site/apache-felix-maven-bundle-plugin-bnd.html maven-bundle-plugin]. Please look at the pom file for details.
+
+=Using as standalone=
+
+==CLI==
+
+{{{
+usage: java -jar cnd2xsd-<version>.jar
+ -fc <arg>        Path for the input cnd file
+ -fp <arg>      Path for properties map.
+ -fx <arg>      Path for generating XML schema.
+ -help          Prints this list.
+ -ns <arg>      The namespace for the XSD.
+ -nsp <arg>     The namespace prefix.
+ -r <arg>       The root element in the XSD.
+ -rtype <arg>   The root element type.
+
+}}}
+
+
+== Example 1 ==
 
 For the following cnd: (car.cnd)
 {{{
@@ -74,4 +100,3 @@ creates the following XSD:
     </xs:complexType>
 </xs:schema>
 }}}
-
