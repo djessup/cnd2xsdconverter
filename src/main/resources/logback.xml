@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- For assistance related to logback-translator or configuration  -->
+<!-- files in general, please contact the logback user mailing list -->
+<!-- at http://www.qos.ch/mailman/listinfo/logback-user             -->
+<!--                                                                -->
+<!-- For professional support please see                            -->
+<!--    http://www.qos.ch/shop/products/professionalSupport         -->
+<!--                                                                -->
+<configuration>
+  <appender name="A1" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <!--pattern>[%d | %t | %c{3} | %p] %m%n</pattern-->
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+   <if condition='property("mode").contains("debug")'>
+    <then>
+      <root level="DEBUG">
+        <appender-ref ref="A1"/>
+      </root>
+    </then>
+  </if>
+   <if condition='property("mode").contains("warn")'>
+    <then>
+      <root level="WARN">
+        <appender-ref ref="A1"/>
+      </root>
+    </then>
+  </if>
+   <if condition='property("mode").contains("info")'>
+    <then>
+      <root level="INFO">
+        <appender-ref ref="A1"/>
+      </root>
+    </then>
+
+  </if>
+     <if condition='isNull("mode")'>
+    <then>
+      <root level="DEBUG">
+        <appender-ref ref="A1"/>
+      </root>
+    </then>
+
+  </if>
+<logger name="org.apache" level="ERROR" />
+<logger name="httpclient" level="ERROR" />
+  
+  
+</configuration>
