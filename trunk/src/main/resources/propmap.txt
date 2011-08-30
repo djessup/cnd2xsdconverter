@@ -1,0 +1,7 @@
+nt:file#fileName,created,createdBy,lastModified,lastModifiedBy
+mix:referenceable#
+nt:unstructured#
+mix:created#created,createdBy
+mix:versionable#
+nt:base#
+mix:lockable#
