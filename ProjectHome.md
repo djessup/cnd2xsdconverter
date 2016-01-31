@@ -1,0 +1,2 @@
+Compact Nodetype Definition(CND) is an alternate way to declare a namespace and define  node types. This has been defined as standard for Java Content Repository (JCR 2.0/1.0) standard to define custom node types(http://jackrabbit.apache.org/node-type-notation.html).  However CND is not XML based. This tool provides a way to convert a CND to an XML Schema document with very little to no manual intervention.
+The XSD can then be used to create JAXB interfaces.
